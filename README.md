@@ -1,8 +1,13 @@
-# cli_table
-CLI Table with selectable rows
+# Read It
 
-A Ruby CLI application that shows how to implement a table that you can scroll through to select a row. 
+A Ruby book finding CLI that uses the Google Books API to allow users to search for books. Users can also save books to their library for later use.
 
-![Scroll Through Table Rows Demo](demo/cli_table_rows.gif)
-<!--![Scroll Through Table Rows Demo](https://github.com/dmartinezm/cli_table/blob/master/demo/cli_table_rows.gif) -->
+In order to access the application, clone this repository. Once inside the book_cli directory run this command to begin:
+
+```
+rake run
+```
+
+ 
+
 

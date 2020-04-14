@@ -8,5 +8,5 @@ task :console do
 end
 
 task :run do 
-  Main.run
+  Main.welcome
 end

@@ -10,16 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_02_185457) do
+ActiveRecord::Schema.define(version: 2020_04_14_012957) do
 
-  create_table "products", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.string "condition"
-    t.float "price"
-    t.boolean "available"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "libraries", force: :cascade do |t|
+    t.string "title"
+    t.string "author"
+    t.string "publisher"
   end
 
 end
