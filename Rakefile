@@ -7,6 +7,6 @@ task :console do
   Pry.start
 end
 
-task :run do 
+task :run do
   Main.welcome
 end
