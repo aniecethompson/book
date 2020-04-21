@@ -22,16 +22,15 @@ class Main
     elsif selection == 2
       view_library
     elsif selection == 3
-         return
+      return
     end
   end
 
   def self.search_book_title
     puts 'Your chariot awaits.'
-    puts 'Please enter the realm in which you would like to explore...'.blue.bold
-
+    search_topic = prompt.ask('Please enter the realm in which you would like to explore...')
+    
     # Search topic and return a list of 5 books matching that query.
-    search_topic = STDIN.gets.chomp
     response = HTTParty.get("https://www.googleapis.com/books/v1/volumes?q=#{search_topic}&maxResults=5")
     items = response.parsed_response['items']
 
@@ -55,8 +54,7 @@ class Main
   end
 
   def self.add_book_to_library
-    puts 'Please enter the number of the book you would like to add to your library'.blue.bold
-    answer = STDIN.gets.chomp
+    answer = prompt.ask('Please enter the number of the book you would like to add to your library')
     Library.create(title: @books[answer.to_i][:title], author: @books[answer.to_i][:author], publisher: @books[answer.to_i][:publisher])
 
     puts "#{@books[answer.to_i][:title]} has been added to your library!".green.bold
