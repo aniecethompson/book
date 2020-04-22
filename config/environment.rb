@@ -1,4 +1,8 @@
 require 'bundler/setup'
+require 'pry'
+require 'colorize'
+require 'tty-prompt'
+require 'httparty'
 
 Bundler.require
 
